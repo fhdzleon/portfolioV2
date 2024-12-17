@@ -6,8 +6,7 @@ export interface GlobalStateZustand {
 }
 
 export const useGlobalStore = create<GlobalStateZustand>((set) => ({
-  theme:
-    (typeof window !== "undefined" && localStorage.getItem("theme")) || "light",
+  theme: "light",
   toggleTheme: () =>
     set((state) => {
       const newTheme = state.theme === "light" ? "dark" : "light";
